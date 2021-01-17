@@ -1,0 +1,24 @@
+{
+  "name": "vendor_name/package_name",
+  "description": "a group of methods usually used in most of our PHP projects",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Katlego Kgwetiane",
+      "email": "administrator@geekpop.io"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "geekpop\\": "src/"
+    }
+  },
+  "require": {
+    "20steps/libphonenumber-for-php": "8.4",
+    "ircmaxell/random-lib": "1.0.x-dev",
+    "mediaburst/clockworksms": "2.0.0",
+    "phpmailer/phpmailer": "v6.2.0"
+  }
+}
