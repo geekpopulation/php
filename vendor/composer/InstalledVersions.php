@@ -29,8 +29,8 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '17b4fcd96f8a64b9dcc6fe35f6bc5a3aaa75f5a9',
-    'name' => 'vendor_name/package_name',
+    'reference' => '91975472cda22f2b880cd24395d01361bc773783',
+    'name' => 'geekpop/geekpop',
   ),
   'versions' => 
   array (
@@ -42,6 +42,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '0613731935f03a799c28c5313fb647109a56d2be',
+    ),
+    'geekpop/geekpop' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '91975472cda22f2b880cd24395d01361bc773783',
     ),
     'giggsey/locale' => 
     array (
@@ -87,15 +96,6 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e38888a75c070304ca5514197d4847a59a5c853f',
-    ),
-    'vendor_name/package_name' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '17b4fcd96f8a64b9dcc6fe35f6bc5a3aaa75f5a9',
     ),
   ),
 );
