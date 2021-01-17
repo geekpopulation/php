@@ -1,5 +1,5 @@
 {
-  "name": "vendor_name/package_name",
+  "name": "geekpop/geekpop",
   "description": "a group of methods usually used in most of our PHP projects",
   "type": "library",
   "minimum-stability": "stable",
