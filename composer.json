@@ -17,7 +17,6 @@
   },
   "require-dev": {
     "20steps/libphonenumber-for-php": "8.4",
-    "ircmaxell/random-lib": "1.0.x-dev",
     "mediaburst/clockworksms": "2.0.0",
     "phpmailer/phpmailer": "v6.2.0"
   }
