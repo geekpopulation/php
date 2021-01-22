@@ -1,6 +1,6 @@
 {
   "name": "geekpop/geekpop",
-  "description": "a group of methods usually used in most of our PHP projects",
+  "description": "a group of methods usually used in most of our PHP projects ",
   "type": "library",
   "minimum-stability": "stable",
   "license": "proprietary",
