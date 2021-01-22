@@ -14,10 +14,5 @@
     "psr-4": {
       "geekpop\\": "src/"
     }
-  },
-  "require-dev": {
-    "20steps/libphonenumber-for-php": "8.4",
-    "mediaburst/clockworksms": "2.0.0",
-    "phpmailer/phpmailer": "v6.2.0"
   }
 }
