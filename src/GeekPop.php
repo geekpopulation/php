@@ -294,7 +294,7 @@ class GeekPop
      * @param $isLightBox
      * @throws Exception
      */
-    public function InputErrors($delta, $index, $element, $isLightBox = null)
+    public function InputErrors($delta, $index, $element = null, $isLightBox = null)
     {
         $val = [
             0 => addslashes("please populate the <strong><i>{$delta}</i></strong> field"),
@@ -692,6 +692,52 @@ class GeekPop
             $clockwork->send($message);
         } catch (ClockworkException $e) {
         }
+    }
+
+    /**
+     * @param $data
+     * @return stdClass
+     */
+    public function SimilarText($data)
+    {
+        $clean1 = str_replace(' ', '', $data->string);
+        $clean1 = str_replace('\n', '', $clean1);
+        $record = null;
+        $array = [];
+        $max = null;
+        foreach ($data->statement as $row) {
+            $row = self::Object($row);
+            /** concatenated string */
+            $concatenatedString = "";
+            $result = "";
+            foreach ($data->columns as $w) {
+                $concatenatedString .= $row->{$w};
+                $result .= "{$row->{$w}} ";
+            }
+            $clean2 = str_replace(' ', '', $concatenatedString);
+            $clean2 = str_replace('\n', '', $clean2);
+            similar_text(strtolower($clean2), strtolower($clean1), $percent);
+            /**
+             *all likely records are placed under $arr
+             *set array key as percentage
+             *set max percentage to the value
+             *of the array with the highest key value
+             */
+            $array[$percent] = ["percentage" => $percent, "record" => $result, "parameter" => $row->id];
+            $max = max(array_keys($array));
+        }
+        /**unset any array with key value of less than $max
+         *set array $v as new array
+         */
+        foreach ($array as $k => $v) {
+            if ($k < $max) {
+                unset($array[$k]);
+            }
+        }
+        foreach ($array as $k => $v) {
+            $record = $v;
+        }
+        return self::Object($record);
     }
 
 }
