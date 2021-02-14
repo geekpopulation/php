@@ -46,7 +46,7 @@ class Encryption extends GeekPop
                 die("bad request");
             }
         }
-        return explode(DELIM, $original_plaintext);
+        return parent::Object(explode(DELIM, $original_plaintext));
     }
 
     function bp($delta)

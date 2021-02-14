@@ -95,7 +95,7 @@ class GeekPop
      */
     public static function jsonDBIterator($object, $stdClass = null)
     {
-        $cfg = new Config;
+        $cfg = new GeekPop;
         $array = json_decode(@file_get_contents("JSON/database.json"), JSON_OBJECT_AS_ARRAY);
         return $stdClass ? (new self)->Object($array[$object]) : $array[$object];
     }
