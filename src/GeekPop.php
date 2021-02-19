@@ -243,19 +243,24 @@ class GeekPop
         return $format->format($delta);
     }
 
-    public static function Percentage($object)
+    public static function Percentage($object, $subtractFromTotal = false)
     {
-        switch(is_int(($object["percent"] * $object["total"]) / 100))
-        {
+        $obj = (new self)->Object($object);
+        switch (is_int(($obj->percent * $obj->total) / 100)) {
             case true:
                 {
-                    return ($object["percent"] * $object["total"])/100;
-                }break;
+                    $percentage = ($obj->percent * $obj->total) / 100;
+                    return $subtractFromTotal ? $obj->total - $percentage :$percentage;
+                }
+                break;
             case false:
                 {
-                    return number_format((float)($object["percent"] * $object["total"]) / 100, 2, '.', '');
-                }break;
-            default:break;
+                    $percentage = number_format((float)($obj->percent * $obj->totla) / 100, 2, '.', '');
+                    return $subtractFromTotal ? $obj->total - $percentage : $percentage;
+                }
+                break;
+            default:
+                break;
         }
     }
     /*operations*/
