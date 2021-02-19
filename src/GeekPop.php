@@ -243,6 +243,21 @@ class GeekPop
         return $format->format($delta);
     }
 
+    public static function Percentage($object)
+    {
+        switch(is_int(($object["percent"] * $object["total"]) / 100))
+        {
+            case true:
+                {
+                    return ($object["percent"] * $object["total"])/100;
+                }break;
+            case false:
+                {
+                    return number_format((float)($object["percent"] * $object["total"]) / 100, 2, '.', '');
+                }break;
+            default:break;
+        }
+    }
     /*operations*/
 
     /**
