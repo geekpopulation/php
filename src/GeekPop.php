@@ -234,12 +234,12 @@ class GeekPop
 
     /**
      * @param $delta
+     * @param $locale
      * @return string
-     * @throws Exception
      */
-    public function Currency($delta)
+    public function Currency($delta,$locale)
     {
-        $format = new \NumberFormatter(self::PracticeSettings()->locale . ".utf-8", \NumberFormatter::CURRENCY);
+        $format = new \NumberFormatter($locale . ".utf-8", \NumberFormatter::CURRENCY);
         return $format->format($delta);
     }
 
