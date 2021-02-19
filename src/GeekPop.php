@@ -139,7 +139,7 @@ class GeekPop
      */
     public function ordinal($number)
     {
-        $format = new \NumberFormatter('za-EN', \NumberFormatter::ORDINAL);
+        $format = new \NumberFormatter('en-ZA', \NumberFormatter::ORDINAL);
         return $format->format($number);
     }
 
