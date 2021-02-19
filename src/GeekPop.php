@@ -255,7 +255,7 @@ class GeekPop
                 break;
             case false:
                 {
-                    $percentage = number_format((float)($obj->percent * $obj->totla) / 100, 2, '.', '');
+                    $percentage = number_format((float)($obj->percent * $obj->total) / 100, 2, '.', '');
                     return $subtractFromTotal ? $obj->total - $percentage : $percentage;
                 }
                 break;
