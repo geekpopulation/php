@@ -240,7 +240,7 @@ class GeekPop
     public function Currency($delta,$locale)
     {
         $format = new \NumberFormatter($locale . ".utf-8", \NumberFormatter::CURRENCY);
-        return $format->format($delta);
+        return $format->format($delta / 10);
     }
 
     public static function Percentage($object, $subtractFromTotal = false)
